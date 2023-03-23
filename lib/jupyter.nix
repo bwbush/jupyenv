@@ -146,6 +146,7 @@
       # make jupyter config and data directories
       mkdir -p $out/config $out/data
       echo "c.NotebookApp.use_redirect_file = False" > $out/config/jupyter_notebook_config.py
+      echo "c.ServerApp.allow_remote_access = True" >> $out/config/jupyter_notebook_config.py
 
       # make jupyter lab user settings and workspaces directories
       mkdir -p $out/config/lab/{user-settings,workspaces}
